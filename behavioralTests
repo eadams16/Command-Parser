@@ -1,0 +1,32 @@
+COMMIT
+DO rudder_controller1 DEFLECT RUDDER 45 LEFT
+DO rudder_controller1 DEFLECT RUDDER 45 RIGHT
+DO rudder_controller1 DEFLECT RUDDER 0 LEFT
+DO rudder_controller1 DEFLECT RUDDER 30 LEFT
+@wait 15
+DO rudder_controller1 DEFLECT RUDDER 45 RIGHT
+	(? Wants a deflection back to right full when rudder hits -15 degrees)
+
+DO elevator_controller1 DEFLECT ELEVATOR 30 UP
+DO elevator_controller1 DEFLECT ELEVATOR 30 DOWN
+
+DO aileron_controller2 DEFLECT AILERONS 45 UP
+DO aileron_controller2 DEFLECT AILERONS 30 DOWN
+DO aileron_controller4 DEFLECT AILERONS 45 UP
+DO aileron_controller4 DEFLECT AILERONS 30 DOWN
+DO aileron_controller4 SPEED BRAKE ON
+DO aileron_controller4 DEFLECT AILERONS 0 DOWN
+
+DO flap_controller4 DEFLECT FLAP 4
+DO flap_controller4 DEFLECT FLAP 3
+DO flap_controller4 DEFLECT FLAP UP
+
+DO engine_controller3 SET POWER 70 
+DO engine_controller3 SET POWER 40 ENGINE engine2
+DO engine_controller3 SET POWER 100
+
+DO gear_controller1 DOWN
+DO gear_controller1 UP
+@wait <rate>
+HALT gear_controller1
+	(?BUT AT 50 PERCENT ON MAIN GEAR, SUBMIT HALT)

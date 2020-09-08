@@ -1,0 +1,22 @@
+Hello world
+true
+Simple tests for creational parser worked!
+Now, declare structures parser and tester...
+> CREATE RUDDER js1 WITH LIMIT 10 SPEED 2 ACCELERATION 0.5
+tick,time,code,action,bus,servicer_id,service_index,request_type,request_id,target_request_id,request_status,request_response,sequence,<values>
+: added rudder: ActuatorRudder{id=Identifier{value=js1} valueInitial=null value=Angle{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=2.0} acceleration=Acceleration{value=0.5} isTerminating=false isCanceled=false limit=Angle{value=10.0}}
+> CREATE ELEVATOR e1 WITH LIMIT 10 SPEED 3 ACCELERATION 0.6
+: added elevator: ActuatorElevator{id=Identifier{value=e1} valueInitial=null value=Angle{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=3.0} acceleration=Acceleration{value=0.6} isTerminating=false isCanceled=false limit=Angle{value=10.0}}
+> CREATE AILERON ail1 WITH LIMIT UP 10 DOWN 10 SPEED 4 ACCELERATION 0.2
+: added aileron: ActuatorAileron{id=Identifier{value=ail1} valueInitial=null value=Angle{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=4.0} acceleration=Acceleration{value=0.2} isTerminating=false isCanceled=false limitUp=Angle{value=10.0} limitDown=Angle{value=10.0}}
+> CREATE SPLIT FLAP f1 WITH LIMIT 10 SPEED 32 ACCELERATION 9
+: added flap: ActuatorFlapSplit{id=Identifier{value=f1} valueInitial=null value=Angle{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=32.0} acceleration=Acceleration{value=9.0} isTerminating=false isCanceled=false}
+> CREATE FOWLER FLAP f2 WITH LIMIT 98 SPEED 33 ACCELERATION 12
+: added flap: ActuatorFlapFowler{id=Identifier{value=f2} valueInitial=null value=Angle{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=33.0} acceleration=Acceleration{value=12.0} isTerminating=false isCanceled=false}
+> CREATE ENGINE eleft WITH SPEED 25 ACCELERATION 2
+: added engine: ActuatorEngine{id=Identifier{value=eleft} valueInitial=null value=Power{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=25.0} acceleration=Acceleration{value=2.0} isTerminating=false isCanceled=false}
+> CREATE NOSE GEAR ng WITH SPEED 4 ACCELERATION 3
+: added nose gear: ActuatorGearNose{id=Identifier{value=ng} valueInitial=null value=Percent{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=4.0} acceleration=Acceleration{value=3.0} isTerminating=false isCanceled=false}
+> CREATE MAIN GEAR mg WITH SPEED 24 ACCELERATION 12
+: added main gear: ActuatorGearMain{id=Identifier{value=mg} valueInitial=null value=Percent{value=0.0} speedCurrent=Speed{value=0.0} speedChange=ACCELERATING speedMax=Speed{value=24.0} acceleration=Acceleration{value=12.0} isTerminating=false isCanceled=false}
+> 

@@ -1,0 +1,7 @@
+DECLARE RUDDER CONTROLLER rudder_controller1 WITH RUDDER rudder1
+DECLARE ELEVATOR CONTROLLER elevator_controller1 WITH ELEVATORS elevator1 elevator2
+DECLARE AILERON CONTROLLER aileron_controller2 WITH AILERONS aileron1 aileron3 aileron5 aileron7 aileron8 aileron6 aileron4 aileron2 PRIMARY aileron1
+DECLARE AILERON CONTROLLER aileron_controller4 WITH AILERONS aileron1 aileron3 aileron5 aileron7 aileron8 aileron6 aileron4 aileron2 PRIMARY aileron3 (SLAVE aileron7 TO aileron3 BY 80 PERCENT) (SLAVE aileron5 TO aileron7 BY 50 PERCENT) (SLAVE aileron1 TO aileron5 BY 75 PERCENT)
+DECLARE FLAP CONTROLLER flap_controller4 WITH FLAPS flap_fowler1 flap_fowler2 flap_split1 flap_split2
+DECLARE ENGINE CONTROLLER engine_controller3 WITH ENGINES engine1 engine2 engine3
+DECLARE GEAR CONTROLLER gear_controller1 WITH GEAR NOSE gear_nose2 MAIN gear_main1 gear_main2
